@@ -7,7 +7,7 @@ const router = express.Router();
 
 const allRoutes = [
     {
-        path:"/book",
+        path:"/books",
         route: BookRoutes
     },
 ];
