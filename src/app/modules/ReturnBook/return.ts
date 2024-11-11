@@ -8,7 +8,7 @@ import prisma from "../../../shared/prisma"
 const returnBookedService = async(borrowId:string,res:any)=>{
 
      
-    // check book 
+    // check borrow 
     const isExistborrow = await prisma.borrowRecord.findUnique({
         where:{borrowId},
         include:{
@@ -28,7 +28,7 @@ const returnBookedService = async(borrowId:string,res:any)=>{
         },
       })
 
-    // update bookavailabele 
+    // update book availabeleCopies 
     await prisma.book.update({
         where:{bookId: isExistborrow.bookId},
         data:{

@@ -45,7 +45,6 @@ const borrowBookedService = async(bookId:string,memberId:string,res:any)=>{
             bookId:true,
             memberId:true,
             borrowDate:true,
-
         }
     });
 
