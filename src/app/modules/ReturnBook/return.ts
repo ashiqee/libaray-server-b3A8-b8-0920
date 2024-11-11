@@ -1,4 +1,4 @@
-import httpStatus from "http-status"
+import { StatusCodes } from "http-status-codes";
 import catchAsync from "../../../shared/catchAsync"
 import sendResponse from "../../../shared/sendResponse"
 import { Request, Response } from "express"
@@ -60,7 +60,7 @@ const returnBook = catchAsync( async( req: Request,res: Response)=>{
     
         sendResponse(res,{
             success:true,
-            status: httpStatus.OK,
+            status: StatusCodes.OK,
             message:"Return book successfully",
            
         })
