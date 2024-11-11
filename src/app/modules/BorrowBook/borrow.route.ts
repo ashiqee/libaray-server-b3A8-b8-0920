@@ -1,5 +1,6 @@
 import express from "express";
-import createBorrowBook from "./borrow";
+import { BorrowControllers } from "./borrow.controller";
+
 
 
 
@@ -9,7 +10,8 @@ const router = express.Router();
 
 
 
-router.post('/',createBorrowBook)
+router.post('/',BorrowControllers.createBorrowBook)
+router.get('/overdue',BorrowControllers.getOverdueBorrowsFromDB)
 
 
 
