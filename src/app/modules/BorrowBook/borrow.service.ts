@@ -94,12 +94,16 @@ const borrowBookedService = async(bookId:string,memberId:string,res:any)=>{
                 }
             });
 
+           
+            
+
             const overdueBorrows = borrows.map((borrow)=>{
                 const dueDate = new Date(borrow.borrowDate);
                 dueDate.setDate(dueDate.getDate()+14);
 
                 if(today > dueDate){
-                    const overdueDays = Math.floor((today.getTime()- dueDate.getTime()))
+                    const timeDiffernce =(today.getTime() - dueDate.getTime())
+                    const overdueDays = Math.floor(timeDiffernce/(1000*60*60*24));
                     return {
                         borrowId: borrow.borrowId,
                         bookTitle: borrow.Book.title,
@@ -110,8 +114,10 @@ const borrowBookedService = async(bookId:string,memberId:string,res:any)=>{
                 return null
             }).filter(borrow => borrow !== null);
 
-            if(overdueBorrows.length >0 ){
-                return{overdueBorrows,
+        
+
+            if(overdueBorrows.length > 0 ){
+                return {overdueBorrows,
                     msg: "Overdue borrow list fetched"
                 };
             }else{
