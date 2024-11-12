@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "7db73fd8-455e-4eaa-9df7-0b6149a52831",
+		"name": "Library server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30613446"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "create book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Towww Row a Mockingbird\",\r\n  \"genre\": \"Fiction\",\r\n  \"publishedYear\": 1960,\r\n  \"totalCopies\": 10,\r\n  \"availableCopies\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/books",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"genre\": \"Fiction\",\r\n  \"publishedYear\": 1960,\r\n  \"totalCopies\": 10,\r\n  \"availableCopies\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/books",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a book",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"genre\": \"Fiction\",\r\n  \"publishedYear\": 1960,\r\n  \"totalCopies\": 10,\r\n  \"availableCopies\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/books/d183492e-e485-436d-833a-078fa9c03fbd",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"books",
+								"d183492e-e485-436d-833a-078fa9c03fbd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a book",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"genre\": \"Fiction\",\r\n  \"publishedYear\": 1960,\r\n  \"totalCopies\": 10,\r\n  \"availableCopies\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/books/d183492e-e485-436d-833a-078fa9c03fbd",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"books",
+								"d183492e-e485-436d-833a-078fa9c03fbd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird - Revised\",\r\n  \"genre\": \"Classic Fiction\",\r\n  \"publishedYear\": 1961,\r\n  \"totalCopies\": 12,\r\n  \"availableCopies\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/books/d183492e-e485-436d-833a-078fa9c03fbd",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"books",
+								"d183492e-e485-436d-833a-078fa9c03fbd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "create member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Alice Johnson\",\r\n  \"email\": \"alice@example.com\",\r\n  \"phone\": \"123-456-7890\",\r\n  \"membershipDate\": \"2024-01-01T00:00:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all members",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"genre\": \"Fiction\",\r\n  \"publishedYear\": 1960,\r\n  \"totalCopies\": 10,\r\n  \"availableCopies\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/members",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a member",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"genre\": \"Fiction\",\r\n  \"publishedYear\": 1960,\r\n  \"totalCopies\": 10,\r\n  \"availableCopies\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/members/8ed9f608-6474-4cce-9677-4f1cf5a729c0",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"members",
+								"8ed9f608-6474-4cce-9677-4f1cf5a729c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a members",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Alice Johnson\",\r\n  \"email\": \"alice.johnson@example.com\",\r\n  \"phone\": \"098-765-4321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/members/875550a0-9dcb-4ef0-b2d6-2906fe5c57a1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"members",
+								"875550a0-9dcb-4ef0-b2d6-2906fe5c57a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a members",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"To Kill a Mockingbird - Revised\",\r\n  \"genre\": \"Classic Fiction\",\r\n  \"publishedYear\": 1961,\r\n  \"totalCopies\": 12,\r\n  \"availableCopies\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/members/8ed9f608-6474-4cce-9677-4f1cf5a729c0",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"members",
+								"8ed9f608-6474-4cce-9677-4f1cf5a729c0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BorrowBook",
+			"item": [
+				{
+					"name": "Create Borrow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": \"d183492e-e485-436d-833a-078fa9c03fbd\",\r\n  \"memberId\": \"8ed9f608-6474-4cce-9677-4f1cf5a729c0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/borrow",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"borrow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"borrowId\": \"b5447665-2c9f-4429-9294-577102b9435a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/return",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Overdue Borrow",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": \"5f180f51-8d90-44b3-afeb-5cf32968520f\",\r\n  \"memberId\": \"11c1f364-73f5-492e-bcb3-01da938e85e7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{live_url}}/borrow/overdue",
+							"host": [
+								"{{live_url}}"
+							],
+							"path": [
+								"borrow",
+								"overdue"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "check api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://libaray-server-b3-a8-b8-0920.vercel.app",
+					"protocol": "https",
+					"host": [
+						"libaray-server-b3-a8-b8-0920",
+						"vercel",
+						"app"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "live_url",
+			"value": "https://libaray-server-b3-a8-b8-0920.vercel.app/api",
+			"type": "string"
+		},
+		{
+			"key": "local_url",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
